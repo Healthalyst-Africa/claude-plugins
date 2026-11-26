@@ -1,0 +1,31 @@
+{
+  "description": "HealthAlyst guardrails: keep secrets unread, and stop pushes, merges and production deploys that skip review.",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Read|Edit|Write|NotebookEdit|Grep",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/hooks/protect-sensitive-files.mjs\"",
+            "timeout": 15,
+            "onFailure": "block",
+            "statusMessage": "Checking the file is safe to open"
+          }
+        ]
+      },
+      {
+        "matcher": "Bash|PowerShell",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/hooks/enforce-git-safety.mjs\"",
+            "timeout": 15,
+            "onFailure": "block",
+            "statusMessage": "Checking the command against HealthAlyst guardrails"
+          }
+        ]
+      }
+    ]
+  }
+}

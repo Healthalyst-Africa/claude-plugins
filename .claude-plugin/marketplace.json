@@ -1,0 +1,18 @@
+{
+  "name": "healthalyst",
+  "owner": {
+    "name": "HealthAlyst Africa",
+    "url": "https://github.com/Healthalyst-Africa"
+  },
+  "metadata": {
+    "description": "Claude Code plugins maintained by HealthAlyst Africa for its own repositories."
+  },
+  "plugins": [
+    {
+      "name": "healthalyst-sdlc",
+      "source": "./plugins/healthalyst-sdlc",
+      "description": "HealthAlyst's AI-native delivery lifecycle: lifecycle skills, a verifier, a security reviewer and guardrail hooks.",
+      "category": "development"
+    }
+  ]
+}
