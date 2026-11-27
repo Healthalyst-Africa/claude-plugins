@@ -30,6 +30,12 @@ Never merge it, approve it, or push to a protected branch.
      in a new way, and link the assessment.
    - **AI assistance:** tick it; the person confirms they understood the
      change before review.
+   - **Manual review:** never tick this box; only a person does, after their
+     own review. Write the verifier's and security reviewer's findings under
+     it, labelled "Claude's self-review", so the person can check them. Until
+     the repository has an Anthropic API key, the Claude review check fails
+     until the person ticks the box or someone else approves; say so when
+     reporting the link.
    - Link the issue with `Closes #<number>` when `$ARGUMENTS` or the branch
      names one.
 5. Show the title and body. After the person confirms, push the branch with
