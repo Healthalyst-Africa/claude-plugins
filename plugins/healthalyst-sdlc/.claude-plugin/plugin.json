@@ -1,6 +1,6 @@
 {
   "name": "healthalyst-sdlc",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "HealthAlyst's AI-native delivery lifecycle: skills for intent, specification, plan, verification, decisions, pull requests, releases and incident reviews; a verifier and a security reviewer; and guardrail hooks that keep secrets unread and changes going through review.",
   "author": {
     "name": "HealthAlyst Africa",
